@@ -1,17 +1,36 @@
 
 table {
     border-collapse: collapse;
+    margin: auto;
+}
+#scrtbl {
+    background-color: pink;   
 }
 body {
-   
+   align-content: center;
 }
-td, tr {
-    border: 1px solid;
+h1, h2 {
+    text-align: center;
+}
+/* h2, {
+    text-align: left;
+} */
+td {
+    border: 0px solid;
     padding: 2rem;
     text-align: center;
     /* height: 25px;
     width: 25px; */
     border-radius: 50%;
+    /* background-color: pink; */
+    cursor: pointer;
+}
+/* table tr: first-child td {
+    border-top: 0;
+} */
+#row0, #row1, #row2, #row3, #row4, #row5, #row6 {
+    border-radius: 50%;
+    background-color: pink;
 }
 button {
     margin: auto;
@@ -22,8 +41,8 @@ button {
     font-size: 30px;
     background-color: red;
     color: green;
+    align-content: center;
 }
-button: hover {
-    background-color: green;
-    color: black;
+button hover {
+    background-color: black;
 }
