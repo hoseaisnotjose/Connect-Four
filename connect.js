@@ -2,22 +2,16 @@ console.log("hello connect four");
 /*--------------- constants --------------*/
 const lookUp = {
     '1': 'red',
-    '-1': 'green',
+    // '-1': 'green',
     'null': 'black'
 }
-const gameBoard = [
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null],
-    [null, null, null, null, null, null, null]
-]
+
+
 
 
 /*-------------- game's state (variables) -----------------*/
 let circle,
-let wrong turn,
+let wrongTurn,
 let turn,
 let winner,
 
@@ -26,22 +20,36 @@ let winner,
 
 /*------------ cached/store element references ----------------*/
 document.querySelectorAll('.td')
-document.querySelector
+document.querySelectorAll('tr')
+document.querySelectorAll('table')
 
 
 
 /*--------------- event listeners -------------*/
-
-
-
+document.querySelector('table').addEventListener('click', handleMove);
+document.querySelector('#n').addEventListener('click', initialize);
 
 
 
 /*-------------- functions ---------------*/
 init();
 
-function init() {
+function initialize() {
+    gameBoard = [
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null],
+        [null, null, null, null, null, null, null]
+    ];
+    turn = 1;
+    winner = null;
+    render();
+}
+
+wrongTurn = [];
+
+
     // Finish initializing state before calling render()
 
-
-}
