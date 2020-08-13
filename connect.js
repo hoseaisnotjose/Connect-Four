@@ -26,7 +26,7 @@ winner
 
 
 /*------------ cached/store element references ----------------*/
-document.querySelectorAll('td')
+const tableData = document.querySelectorAll('td')
 document.querySelectorAll('tr')
 document.querySelectorAll('table')
 
@@ -34,10 +34,19 @@ document.querySelectorAll('table')
 
 /*--------------- event listeners -------------*/
 document.querySelector('#n').addEventListener('click', init);
+// document.querySelector('table').addEventListener('click', )
 
 
 
 /*-------------- functions ---------------*/
+function handleMove(e) {
+    console.log(e.target)
+  // get row and column number from e.target (refer to console/inspect)
+  // next, use row/column number to access gameBoard[row number][circle number]
+  // change position in gameBoard array to player  
+
+    }
+
 const render = () => {
     const table = document.createElement('table');
     table.addEventListener('click', handleMove)
@@ -46,7 +55,7 @@ const render = () => {
         tr.id = `row${i}`
         for (let y = 0; y < gameBoard[i].length; y++) {
             const td = document.createElement('td')
-            td.className = `c${y} col${y}`
+            td.className = `c${y} row${i}`
             gameBoard[i][y]
                 ? td.className+= ` p${gameBoard[i][y]}`
                 : null
@@ -57,9 +66,7 @@ const render = () => {
     document.getElementById("gameBoard").appendChild(table)
 }
 
-function handleMove(e) {
-    console.log(e);
-}
+
 function init() {
     
     turn = 1;
@@ -74,7 +81,6 @@ function init() {
 wrongTurn = [];
 
 
-init()
+// init()
 
-    // Finish initializing state before calling render()
-
+// Finish initializing state before calling render()
