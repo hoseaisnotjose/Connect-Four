@@ -8,12 +8,10 @@ table {
 }
 body {
    align-content: center;
+   text-align: center;
 }
-h1, h2 {
+/* h1, h2, h6 {
     text-align: center;
-}
-/* h2, {
-    text-align: left;
 } */
 td {
     border: 0px solid;
@@ -41,7 +39,6 @@ button {
     font-size: 30px;
     background-color: red;
     color: green;
-    align-content: center;
 }
 button hover {
     background-color: black;
