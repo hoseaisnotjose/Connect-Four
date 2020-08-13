@@ -23,12 +23,19 @@ td {
     /* background-color: pink; */
     cursor: pointer;
 }
+
 /* table tr: first-child td {
     border-top: 0;
 } */
 #row0, #row1, #row2, #row3, #row4, #row5, #row6 {
     border-radius: 50%;
     background-color: pink;
+}
+.p1 {
+    background-color: red;
+}
+.p2 {
+    background-color: yellow;
 }
 button {
     margin: auto;
