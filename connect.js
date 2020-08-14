@@ -40,12 +40,18 @@ document.querySelector('#n').addEventListener('click', init);
 
 /*-------------- functions ---------------*/
 function handleMove(e) {
-    console.log(e.target)
+    // console.log(e.target.cellIndex)
   // get row and column number from e.target (refer to console/inspect)
   // next, use row/column number to access gameBoard[row number][circle number]
   // change position in gameBoard array to player  
+    checkCol(e.target.cellIndex)
+
 
     }
+    
+// function checkCol(colIndex) {
+    // start at the bottom of the column. If that's occupied, we'll move up and check
+  
 
 const render = () => {
     const table = document.createElement('table');
@@ -59,6 +65,11 @@ const render = () => {
             gameBoard[i][y]
                 ? td.className+= ` p${gameBoard[i][y]}`
                 : null
+            if (gameBoard[i][y] === 1) {
+                td.style.backgroundColor = 'red'
+            } else if (gameBoard[i][y] === -1) {
+                td.style.backgroundColor = 'green'
+            }
             tr.appendChild(td)
         }   
         table.appendChild(tr)
