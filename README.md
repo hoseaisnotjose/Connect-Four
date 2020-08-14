@@ -12,4 +12,5 @@ This game is easy to play. The following are the rules:
 3) There are two assigned disks that are different colors 
 4) On this game, the disks are either green or red
 
+
 Enjoy!
