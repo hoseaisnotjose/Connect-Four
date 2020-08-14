@@ -9,10 +9,15 @@ table {
 body {
    align-content: center;
    text-align: center;
+   background-color: black;
 }
 /* h1, h2, h6 {
     text-align: center;
 } */
+h1 {
+    color: whitesmoke;
+    font-weight: bold;
+}
 td {
     border: 0px solid;
     padding: 2rem;
@@ -29,7 +34,7 @@ td {
 } */
 #row0, #row1, #row2, #row3, #row4, #row5, #row6 {
     border-radius: 50%;
-    background-color: pink;
+    background-color: whitesmoke;
 }
 .p1 {
     background-color: red;
