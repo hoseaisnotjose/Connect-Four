@@ -8,7 +8,7 @@ Connect Four is a "solved game" in that the first player can win by playing the 
 This game is easy to play. The following are the rules:
 
 1) The objective of the player is to be the first one to form a horizontal, vertical, or diagonal line of four discs
-2) The player will initially have chosen thier own discs
+2) The player will initially have chosen their own discs
 3) There are two assigned disks that are different colors 
 4) On this game, the disks are either green or red
 
