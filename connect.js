@@ -54,7 +54,7 @@ for (let i = 0; i < tableData.length; i++) {
 }
 
 function clickSlots(colIdx) {
-    console.log(colIdx);
+    // console.log(colIdx);
     if (gameBoard[0][colIdx]) {
         console.log('this is filled');
         return;
@@ -66,15 +66,38 @@ function clickSlots(colIdx) {
             gameBoard[row][colIdx] = currentPlayer;
             isFilled = false;
             currentPlayer *= -1;
-            console.log(currentPlayer);
+            // console.log(currentPlayer);
         } else {
             // check the next row
             row--;
         }
         
     }
-    console.log(gameBoard);
+    // console.log(gameBoard);
     // check "win call" here
+    function checkWinner () {
+        for (let i = 0; i < gameBoard.length; i++) {
+            for (let y = 0; y < gameBoard.length; y++) {
+                // check down
+                if (checkWinner(gameBoard[i][y] + gameBoard[i + 1][y] + gameBoard[i + 2][y] + gameBoard[i + 3][y]) === 4) {
+                    alert(`${currentPlayer} Won!`)
+            }
+                // check right
+             if (checkWinner(gameBoard[i][y] + gameBoard[i][y + 1] + gameBoard[i][y + 2] + gameBoard[i][y + 3]) === 4) {
+                    alert(`${currentPlayer} Won!`)
+                // check down-right
+            }   if (checkWinner(gameBoard[i][y] + gameBoard[i + 1][y + 1] + gameBoard[i + 2][y + 2] + gameBoard[i + 3][y + 3]) === 4){
+                    alert(`${currentPlayer} Won!`)
+                // check down left
+            }   if (checkWinner(gameBoard[i][y] + gameBoard[i - 1][y + 1] + gameBoard[i - 2][y + 2] + gameBoard[i - 3][y + 3]) === 4) {
+                alert(`${currentPlayer} Won!`)
+            }
+        }
+        
+            
+    }
+    
+    checkWinner(); 
     render();
 }
     
@@ -107,6 +130,8 @@ const render = () => {
     document.getElementById("gameBoard").appendChild(table)
 }
 
+
+
 init();
 function init() {
     
@@ -118,9 +143,8 @@ function init() {
 
 // function theWinner() {
 //     for (let i = 0; i < winningCombos.length; i++)
-// }
 
-wrongTurn = [];
+// }
 
 
 init()
